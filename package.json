@@ -1,0 +1,19 @@
+{
+  "name": "diy",
+  "version": "1.0.0",
+  "description": "diy cli",
+  "main": "index.js",
+  "bin": "./bin/diy.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^5.1.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.4.0",
+    "open": "^7.0.4",
+    "ora": "^4.0.4"
+  }
+}
