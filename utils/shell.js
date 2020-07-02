@@ -6,7 +6,7 @@ const shell = (...args) => {
     // print in terminal
     proc.stdout.pipe(process.stdout);
     proc.stderr.pipe(process.stderr);
-    // on close
+    // listen event close
     proc.on('close', resolve);
   });
 };

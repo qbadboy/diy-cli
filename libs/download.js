@@ -1,24 +1,33 @@
 const { promisify } = require('util');
 const clone = promisify(require('download-git-repo'));
-const chalk = require('chalk');
 const ora = require('ora');
 const log = require('../utils/log');
+// git repo
+let repo = 'github git rep';
 
 /**
- * git clone
- * @param {String} repo github地址
- * @param {String} desc download target dir
+ * download git repo
+ * @param {String} framework 
  */
-module.exports = async (repo, desc) => {
-  // clone
-  log(`🚘 开始下载`, 'info');
-  const loading = ora('正在下载...');
-  loading.start();
-  try {
-    await clone(repo, desc);
-    loading.succeed();
-  } catch (e) {
-    loading.fail();
-    console.error(e);
+module.exports = framework => {
+  switch(framework) {
+    case 'vue':
+      repo = 'github:qbadboy/vue-template';
+      break;
+    default: 
+      break;
   }
+
+  return async (desc) => {
+    // clone
+    const Loading = ora('正在下载...');
+    Loading.start();
+    try {
+      await clone(repo, desc);
+      Loading.succeed();
+    } catch (e) {
+      Loading.fail();
+      log(e, 'error');
+    }
+  };
 };
