@@ -6,13 +6,13 @@ cd ./diy_cli
 npm install
 ```
 
-## 指令注册
+## 本地注册
 
 ```bash
 cd ./diy_cli
 npm link
 ```
-## 指令注销
+## 本地注销
 
 ```bash
 cd ./diy_cli
