@@ -29,5 +29,5 @@ module.exports = async (dirname) => {
   // npm install
   await install(dirname);
   // start dev server
-  start(dirname);
+  // start(dirname);
 };

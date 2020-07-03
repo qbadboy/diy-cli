@@ -5,6 +5,7 @@ const pkg = require('../package.json');
 const log = require('../utils/log');
 // libs
 const initCommand = require('../commands/init');
+const refreshCommand = require('../commands/refresh');
 // defined version
 program.version(pkg.version, '-v, --version');
 // regist command
@@ -23,9 +24,7 @@ program
 program
   .command('refresh')
   .description('scan pages and generte routes.js')
-  .action(() => {
-    log(`generte routes.js`, 'warring');
-  });
+  .action(refreshCommand);
 
 program
   .arguments('<commands>')

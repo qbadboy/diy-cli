@@ -9,13 +9,11 @@ module.exports = async (dirname) => {
     cwd: path.join(process.cwd(), dirname),
   });
   log(
-    `
+    `✨ 安装完成！ \n        
   ======================
-    安装完成！         
-    cd ./${dirname}
-    npm run serve     
-  ======================
-  \n\n`,
-    'warrning'
+      cd ./${dirname}
+      npm run serve     
+  ======================\n`,
+    'warning'
   );
 };

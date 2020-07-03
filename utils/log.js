@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const colors = {
   primary: 'white',
-  warring: 'yello',
+  warning: 'yellow',
   info: 'green',
   error: 'red'
 };
