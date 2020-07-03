@@ -18,3 +18,11 @@ npm link
 cd ./diy_cli
 npm unlink
 ```
+
+## 支持的命令
+```bash
+#创建项目
+diy init <project>
+#根据src/pages下模块，生成路由配置
+diy refresh
+```
